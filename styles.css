@@ -1,0 +1,222 @@
+/*
+ * 공통 스타일 파일
+ *
+ * 이 파일에는 사이트 전반에서 사용되는 커스텀 스타일을 정의합니다.
+ * Tailwind CSS를 사용하므로 여기에 정의되는 클래스는 Tailwind와 함께 사용됩니다.
+ */
+
+/* 기본 폰트 설정: Noto Sans KR를 기본으로 하여 부드럽고 일관된 타이포그래피 제공 */
+body {
+    /* 기본 폰트 설정: Noto Sans KR를 기본으로 하여 부드럽고 일관된 타이포그래피 제공 */
+    font-family: "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* 폰트 스무딩: 화면에서 더 부드럽게 보이도록 합니다 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* 기본 폰트 두께를 400으로 설정하여 글자가 두꺼워 보이지 않도록 합니다 */
+    font-weight: 400;
+    /* 줄 높이를 조금 여유 있게 설정하여 가독성을 높입니다 */
+    line-height: 1.6;
+}
+
+/* 제목 계열 폰트 두께 설정: h1~h4 요소는 일관된 볼드감이 있도록 600으로 지정 */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+/* 디자인의 메인 색상 정의 */
+.bg-main-pink { background-color: #d10074; }
+.text-main-pink { color: #d10074; }
+.border-main-pink { border-color: #d10074; }
+
+.bg-main-green { background-color: #1abc9c; }
+.text-main-green { color: #1abc9c; }
+.border-main-green { border-color: #1abc9c; }
+
+/* 어두운 모드 색상: 푸터 등 어두운 영역에 사용 */
+.bg-main-dark { background-color: #1a1a1a; }
+.bg-main-darker { background-color: #111111; }
+
+/* 짙은 핑크색 정의: 네비게이션 선택 탭 등에서 사용 */
+.bg-main-pink-dark { background-color: #b3005e; }
+
+/* 네비게이션 링크 스타일 */
+/*
+ * 헤더 배경을 흰색으로 두고, 메뉴 텍스트는 기본적으로 검은색으로 설정합니다.
+ * 호버 시에는 연한 회색 배경으로 바뀌며, 텍스트는 그대로 검은색을 유지합니다.
+ * 활성 상태(active)일 때는 핑크색 배경으로 채워지고 텍스트는 흰색으로 변경합니다.
+ */
+.nav-link {
+    color: #333333;                /* 기본 텍스트 색상 (검정) */
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+.nav-link:hover {
+    background-color: #f2f2f2;      /* 연한 회색 배경 */
+    color: #333333;                /* 텍스트 색상 유지 */
+}
+.nav-link.active {
+    background-color: #d10074;      /* 메인 핑크색 배경 */
+    color: #ffffff;                /* 활성 상태는 흰색 텍스트 */
+    border-color: #d10074;
+}
+
+/* 각 아이콘과 텍스트 사이 간격을 조절하고, 아이콘 색상을 상위 요소에 맞춥니다 */
+.nav-link i {
+    margin-right: 0.25rem;
+    color: inherit;               /* 아이콘 색상도 텍스트 색상과 동일하게 상속 */
+}
+/* 섹션 배경을 구분하기 위한 라이트 컬러 클래스 */
+.bg-section-light-gray {
+    /* 연한 회색 배경: 섹션 구분을 위해 사용 */
+    background-color: #f7f7f7;
+}
+/* 섹션 배경 색상 조절
+ * 이전 버전에서는 전체 섹션에 강한 색상을 적용하여 시각적인 부담이 있었습니다.
+ * 아래의 색상은 좀 더 부드러운 파스텔 톤으로 변경하여 가독성을 높였습니다.
+ */
+.bg-section-light-pink {
+    /* 밝은 파스텔 핑크 */
+    background-color: #fff1f6;
+}
+.bg-section-light-green {
+    /* 밝은 파스텔 민트
+     * 흰색과 구분될 수 있도록 은은하면서도 더 선명한 녹색 톤으로 조정했습니다.
+     */
+    background-color: #e9f7f3;
+}
+
+/* ------------------------------------------------------------------
+ * 카드 스타일 오버라이드
+ *
+ * 섹션 내부에 있는 회색 카드(bg-gray-100)와 회색 테두리(border-gray-200)를
+ * 파스텔 디자인에 맞게 흰색 배경과 컬러 테두리로 변경합니다.
+ * 각 섹션의 테마 색상에 맞춰 테두리 색상을 지정하며,
+ * 카드에 그림자를 추가해 입체감을 줍니다.
+ */
+/* 소액결제 섹션(핑크 배경) 카드 스타일 */
+section.bg-section-light-pink .bg-gray-100 {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+section.bg-section-light-pink .border-gray-200 {
+    border-color: #d10074 !important;
+}
+section.bg-section-light-pink .bg-gray-100 .border-gray-200 {
+    border-color: #d10074 !important;
+}
+
+/* 장단점 카드: 좌측 카드(장점)와 우측 카드(단점)의 테두리 색상을 구분합니다 */
+section.bg-section-light-pink .grid.grid-cols-1.md\:grid-cols-2 > div.bg-gray-100:nth-child(1) {
+    border-left-width: 4px;
+    border-left-color: #1abc9c;
+    /* 전체 테두리 색상도 녹색으로 통일 */
+    border-color: #1abc9c;
+}
+section.bg-section-light-pink .grid.grid-cols-1.md\:grid-cols-2 > div.bg-gray-100:nth-child(2) {
+    border-left-width: 4px;
+    border-left-color: #e3342f;
+    /* 전체 테두리 색상도 빨간색으로 통일 */
+    border-color: #e3342f;
+}
+/* 장단점 제목 색상 유지 */
+section.bg-section-light-pink h4.text-green-600 {
+    color: #1abc9c;
+}
+section.bg-section-light-pink h4.text-red-600 {
+    color: #e3342f;
+}
+
+/* 신용카드 현금화 섹션(흰색 배경): 카드 테두리를 핑크색으로 통일 */
+section.bg-white .border-gray-200 {
+    border-color: #d10074 !important;
+}
+section.bg-white .bg-gray-100 {
+    background-color: #ffffff;
+}
+section.bg-white .bg-gray-100 .border-gray-200 {
+    border-color: #d10074 !important;
+}
+
+/* 정보이용료 섹션(녹색 배경) 카드 스타일 */
+section.bg-section-light-green .bg-gray-100 {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+section.bg-section-light-green .border-gray-200 {
+    border-color: #1abc9c !important;
+}
+section.bg-section-light-green .bg-gray-100 .border-gray-200 {
+    border-color: #1abc9c !important;
+}
+section.bg-section-light-green i {
+    color: #1abc9c;
+}
+
+/* 정보이용료 섹션 리스트 항목 왼쪽 테두리 색상 지정 */
+section.bg-section-light-green ol li {
+    border-left-color: #1abc9c !important;
+}
+/*
+ * 추가적인 공통 스타일 정의를 이곳에 작성할 수 있습니다.
+ * 예) 버튼 커스텀, 섹션 간격 조절 등
+ */
+
+/*
+ * 스크롤 애니메이션을 위한 클래스
+ * 기본 상태에서는 요소가 아래쪽에 있으며 보이지 않다가,
+ * 화면에 나타날 때 서서히 위로 올라오며 나타나도록 설정합니다.
+ */
+.scroll-element {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 화면에 보이면 활성화되어 서서히 나타나며 위로 올라옵니다 */
+.scroll-element.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*
+ * 후기 슬라이드 캐러셀에 적용할 기본 스타일
+ * 기본적으로 투명하게 두었다가 'active' 클래스가 붙으면 서서히 나타나도록 합니다.
+ */
+.review-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+.review-slide.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+/* ------------------------------------------------------------------
+ * [추가] 비디오 배경 섹션 스타일
+ * ------------------------------------------------------------------ */
+
+/* 비디오가 섹션을 벗어나는 것을 막고, 다른 콘텐츠가 위에 올 수 있도록 relative 설정 */
+.hero-video-section {
+    position: relative;
+    overflow: hidden; 
+    /* 중요: 비디오가 화면 높이의 50%를 최소한으로 확보하여 잘리지 않도록 설정 */
+    min-height: 50vh; 
+}
+
+/* 비디오를 배경처럼 보이게 만드는 커스텀 클래스 */
+.background-video {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* 비디오가 섹션을 꽉 채우도록 설정 (화면 비율에 따라 일부 잘릴 수 있음) */
+    object-fit: cover; 
+    /* 다른 콘텐츠보다 가장 아래에 위치 */
+    z-index: 10;
+}

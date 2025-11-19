@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="국민비상금 소개 페이지 – 국민비상금 보증업체의 서비스와 장점을 자세히 소개합니다. 안전하고 합법적인 현금화 방법을 안내합니다.">
+    <title>국민비상금 보증업체 | 소개</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Noto Sans KR for unified typography -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" />
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    
+    <!-- 사용자 정의 스타일을 외부 파일로 분리했습니다 -->
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="bg-white text-gray-900"> <!-- 기본 배경 흰색, 텍스트 검정색으로 변경 -->
+
+    <!-- Header / Navigation (index.html과 동일) -->
+    <!-- 헤더 배경을 흰색으로 변경하고 핑크색 보더를 적용하여 깔끔한 구분선 효과를 줍니다 -->
+    <header class="bg-white border-b-2 border-main-pink shadow-md sticky top-0 z-50 py-4">
+        <div class="container mx-auto px-6 text-center relative">
+            <!-- Logo/Title -->
+            <a href="index.html" class="text-4xl font-bold text-main-pink mb-3 inline-block">
+                국민비상금 보증업체
+            </a>
+            
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-900 focus:outline-none absolute top-1/2 -translate-y-1/2 right-6" style="margin-top: -6px;">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-8 6h8" />
+                </svg>
+            </button>
+            
+            <!-- Desktop/Mobile Nav -->
+            <nav id="mobile-menu" class="hidden md:flex md:justify-center md:space-x-4 items-center w-full">
+                <!-- 네비게이션 메뉴: 각 항목은 사이트 내 다른 페이지로 연결됩니다 -->
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>보증업체</span></a>
+                <a href="index2.html" class="nav-link active"><i class="fas fa-info-circle"></i><span>국민비상금 소개</span></a>
+                <a href="index3.html" class="nav-link"><i class="fas fa-list"></i><span>보증업체 이용방법</span></a>
+                <a href="index4.html" class="nav-link"><i class="fas fa-comments"></i><span>국민비상금 후기</span></a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Page Title / Hero Section -->
+        <!-- 핸드쉐이크 이미지를 활용한 배경과 어두운 오버레이를 적용 -->
+        <section class="relative py-16 md:py-24 text-center" style="background-image: url('img/handshake-illustration.png'); background-size: cover; background-position: center;">
+            <!-- 어두운 오버레이 -->
+            <!-- 오버레이 불투명도를 높여 텍스트 가독성을 향상합니다 -->
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 container mx-auto px-6">
+                <h1 class="text-4xl md:text-5xl font-bold text-white">국민비상금에 오신 것을 환영합니다</h1>
+            </div>
+        </section>
+
+        <!-- Introduction Content -->
+        <!-- 배경색 변경 (bg-main-dark -> bg-white) -->
+        <section class="scroll-element bg-white py-16 md:py-24">
+            <div class="container mx-auto px-6 max-w-3xl space-y-12">
+                
+                <!-- Text Block 1 -->
+                <!-- 텍스트 색상 변경 (text-gray-300 -> text-gray-700, text-white -> text-gray-900) -->
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p class="text-2xl font-semibold text-gray-900">안녕하세요 국민비상금입니다.</p>
+                    <p>
+                        인생을 살아가다 보면 원치 않게 대출 혹은 급전이 필요한 경우가 있습니다.
+                        그럴 때마다 은행 대출 혹은 지인한테 돈 빌리기가 쉽지 않습니다.
+                    </p>
+                    <p class="text-xl font-medium text-main-pink"> <!-- 강조색 유지 -->
+                        저희 국민비상금을 이용해 보시는 방법은 어떠신가요?
+                    </p>
+                </div>
+
+                <!-- Image 1 (Handshake) -->
+                <div>
+                    <img src="img/7.png" alt="신뢰와 안전의 파트너십" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Text Block 2 -->
+                <!-- 텍스트 색상 변경 (text-gray-300 -> text-gray-700) -->
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                        국민비상금은 수년간의 경험을 바탕으로, 고객들에게 안전하고 효율적인 현금화 서비스를 제공합니다. 우리는 고객의 필요와 상황에 맞는 맞춤형 솔루션을 제공하며, 언제나 고객의 입장에서 신속하고 정확한 서비스를 제공할 것을 약속드립니다.
+                    </p>
+                    <p>
+                        또한, 현금화 서비스가 처음인 분들도 쉽게 이용할 수 있도록 친절한 고객 지원을 제공합니다.
+                    </p>
+                </div>
+
+                <!-- Image 2 (소개 영상 자리) -->
+                <!-- 기존의 핑크 배경 플레이스홀더 대신 임시 이미지를 사용합니다 -->
+                <div>
+                    <img src="img/8.png" alt="국민비상금 소개 이미지" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Text Block 3 -->
+                <!-- 텍스트 색상 변경 (text-gray-300 -> text-gray-700) -->
+                <div class="text-lg text-gray-700 leading-relaxed space-y-4">
+                    <p>
+                        저희 국민비상금은 24시간 언제나 빠르고 안전한 현금화가 필요할 때 언제든지 믿을 수 있는 파트너가 되어드리겠습니다. 언제든지 편리하고 안전하게 현금화 서비스를 이용해 보세요.
+                    </p>
+                    <p class="text-xl font-semibold text-main-green"> <!-- 강조색 유지 -->
+                        저희 국민비상금에서 추천하는 현금화업체는 불법 업체가 아닙니다.
+                        모두 상품권 거래를 통한 현금화를 진행하기 때문에 모두 합법 업체입니다.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!-- 깔끔한 3단 구조의 푸터: 사이트명, 바로가기, 소셜/고객센터 -->
+    <footer class="bg-main-dark text-white py-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            <!-- 회사명 및 소개 -->
+            <div class="text-center md:text-left">
+                <a href="index.html" class="text-3xl font-bold mb-4 inline-block">국민비상금 보증업체</a>
+                <p class="text-sm text-gray-400 mt-2">급한 자금을 빠르고 안전하게 마련하는 믿을 수 있는 파트너</p>
+            </div>
+            <!-- 바로가기 링크 -->
+            <div class="text-center md:text-left">
+                <h4 class="text-xl font-semibold mb-3">바로가기</h4>
+                <ul class="space-y-2">
+                    <li><a href="index.html" class="hover:text-gray-300">보증업체</a></li>
+                    <li><a href="index2.html" class="hover:text-gray-300">국민비상금 소개</a></li>
+                    <li><a href="index3.html" class="hover:text-gray-300">보증업체 이용방법</a></li>
+                    <li><a href="index4.html" class="hover:text-gray-300">국민비상금 후기</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-8 text-center text-xs text-gray-500">
+            &copy; 2024 국민비상금 보증업체. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Toggle Script -->
+    <!-- 공통 스크립트 로드 -->
+    <script src="scripts.js"></script>
+
+</body>
+</html>
