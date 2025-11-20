@@ -7,8 +7,8 @@
 
 /* 기본 폰트 설정: Noto Sans KR를 기본으로 하여 부드럽고 일관된 타이포그래피 제공 */
 body {
-    /* 기본 폰트 설정: Noto Sans KR를 기본으로 하여 부드럽고 일관된 타이포그래피 제공 */
-    font-family: "Noto Sans KR", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    /* 기본 폰트 설정: KOHI 배움체를 우선 사용하고, 없을 경우 Noto Sans KR를 fallback으로 지정합니다 */
+    font-family: 'KohiLearn', 'Noto Sans KR', "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     /* 폰트 스무딩: 화면에서 더 부드럽게 보이도록 합니다 */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -174,7 +174,8 @@ section.bg-section-light-green ol li {
 .scroll-element {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    /* 반응 속도를 높이기 위해 애니메이션 시간을 단축합니다 */
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
 }
 
 /* 화면에 보이면 활성화되어 서서히 나타나며 위로 올라옵니다 */
@@ -219,4 +220,55 @@ section.bg-section-light-green ol li {
     object-fit: cover; 
     /* 다른 콘텐츠보다 가장 아래에 위치 */
     z-index: 10;
+}
+
+/* ------------------------------------------------------------------
+ * 커스텀 폰트 정의
+ * KOHI 배움체는 한국보건복지인력개발원에서 배포하는 무료 한글 폰트입니다.
+ * 아래 @font-face 규칙을 통해 웹 폰트로 불러와 사이트 전체에 적용합니다.
+ * 폰트가 로드되지 않을 경우를 대비해 굵기별로 한 가지씩만 지정했습니다.
+ */
+@font-face {
+    font-family: 'KohiLearn';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KohiLearn';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/KOHIBaeumOTF.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+/* ------------------------------------------------------------------
+ * 모바일 메뉴 슬라이드 인 디자인
+ * 작은 화면에서는 네비게이션을 화면 밖에 위치시켰다가 토글 시 슬라이드 되도록 설정합니다.
+ * 큰 화면(md 이상)에서는 기존 레이아웃을 유지합니다.
+ */
+@media (max-width: 768px) {
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -80%;
+        width: 80%;
+        height: 100vh;
+        background-color: #ffffff;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        padding-top: 4rem; /* 헤더 높이만큼 여백 추가 */
+        transition: right 0.3s ease;
+        z-index: 100;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    }
+    #mobile-menu.open {
+        right: 0;
+    }
+    /* 모바일 메뉴가 열렸을 때 스크롤을 막기 위한 body 클래스 */
+    body.menu-open {
+        overflow: hidden;
+    }
 }

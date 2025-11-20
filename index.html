@@ -13,6 +13,9 @@
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
 
+    <!-- 파비콘 추가 -->
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+
     <!-- 사용자 정의 스타일을 외부 파일로 분리했습니다 -->
     <link rel="stylesheet" href="styles.css" />
 </head>
@@ -22,9 +25,9 @@
     <!-- 헤더 배경을 흰색으로 변경하고 하단에 핑크색 보더를 추가하여 깔끔한 구분선 효과를 줍니다 -->
     <header class="bg-white border-b-2 border-main-pink shadow-md sticky top-0 z-50 py-4">
         <div class="container mx-auto px-6 text-center relative">
-            <!-- Logo/Title -->
-            <a href="index.html" class="text-4xl font-bold text-main-pink mb-3 inline-block">
-                국민비상금 보증업체
+            <!-- Logo/Title: 텍스트 대신 로고 이미지 사용 -->
+            <a href="index.html" class="inline-block">
+                <img src="img/header-logo.png" alt="국민비상금 보증업체 로고" class="h-12 md:h-16 mx-auto" />
             </a>
             
             <!-- Mobile Menu Button -->
@@ -34,8 +37,8 @@
                 </svg>
             </button>
             
-            <!-- Desktop/Mobile Nav -->
-            <nav id="mobile-menu" class="hidden md:flex md:justify-center md:space-x-4 items-center w-full">
+            <!-- Desktop/Mobile Nav: 모바일에서는 슬라이드 방식이 적용되므로 'hidden' 클래스를 제거 -->
+            <nav id="mobile-menu" class="md:flex md:justify-center md:space-x-4 items-center w-full">
                 <!-- 네비게이션 메뉴: 각 항목은 사이트 내 다른 페이지로 연결됩니다 -->
                 <a href="index.html" class="nav-link active"><i class="fas fa-home"></i><span>보증업체</span></a>
                 <a href="index2.html" class="nav-link"><i class="fas fa-info-circle"></i><span>국민비상금 소개</span></a>

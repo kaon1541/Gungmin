@@ -11,7 +11,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const menu = document.getElementById('mobile-menu');
     if (menuButton && menu) {
         menuButton.addEventListener('click', function() {
-            menu.classList.toggle('hidden');
+            // 모바일 메뉴 슬라이드 토글
+            const body = document.body;
+            if (menu.classList.contains('open')) {
+                menu.classList.remove('open');
+                body.classList.remove('menu-open');
+            } else {
+                menu.classList.add('open');
+                body.classList.add('menu-open');
+            }
         });
     }
 
@@ -89,8 +97,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 모든 scroll-element에 대해 관찰을 시작하고, 각 요소에 순차적인 딜레이를 설정합니다.
     const scrollElements = document.querySelectorAll('.scroll-element');
     scrollElements.forEach((el, index) => {
-        // 각 요소의 transition-delay를 증가시켜 순차적으로 등장하도록 합니다.
-        el.style.transitionDelay = `${index * 0.15}s`;
+        // 각 요소의 transition-delay를 감소시켜 더 빠르게 등장하도록 합니다.
+        el.style.transitionDelay = `${index * 0.05}s`;
         scrollObserver.observe(el);
     });
 });
