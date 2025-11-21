@@ -247,7 +247,32 @@ section.bg-section-light-green ol li {
  * 작은 화면에서는 네비게이션을 화면 밖에 위치시켰다가 토글 시 슬라이드 되도록 설정합니다.
  * 큰 화면(md 이상)에서는 기존 레이아웃을 유지합니다.
  */
+/* ============================================================================
+   모바일 메뉴 (모바일에서만 오픈)
+   PC에서는 항상 일반 메뉴로 보임
+============================================================================ */
+
+/* PC에서는 절대 position:fixed 되면 안되므로 초기화 */
+/* PC 기본 상태 (모바일 메뉴 슬라이드 OFF) */
+#mobile-menu {
+    position: static;
+    width: auto;
+    height: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;   /* PC 메뉴 중앙 정렬 */
+    align-items: center;
+    gap: 1.5rem;
+    transition: none;
+}
+
+/* 모바일 전용 슬라이드 메뉴 */
 @media (max-width: 768px) {
+
+    /* 숨긴 상태 */
     #mobile-menu {
         position: fixed;
         top: 0;
@@ -255,20 +280,27 @@ section.bg-section-light-green ol li {
         width: 80%;
         height: 100vh;
         background-color: #ffffff;
+        padding: 4rem 1.5rem 2rem;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+        transition: right 0.35s ease;
+        z-index: 9999;
+        display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        padding-top: 4rem; /* 헤더 높이만큼 여백 추가 */
-        transition: right 0.3s ease;
-        z-index: 100;
-        box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+        align-items: flex-start; /* 좌측 정렬 */
+        justify-content: flex-start; /* 상단 정렬 */
+        gap: 1.5rem;
     }
+
+    /* 열림 상태 */
     #mobile-menu.open {
         right: 0;
     }
-    /* 모바일 메뉴가 열렸을 때 스크롤을 막기 위한 body 클래스 */
+
+    /* 메뉴 열릴 때 body 스크롤 잠금 */
     body.menu-open {
         overflow: hidden;
     }
 }
+
+
+

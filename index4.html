@@ -30,20 +30,28 @@
             </a>
             
             <!-- Mobile Menu Button -->
-            <button id="mobile-menu-button" class="md:hidden text-gray-900 focus:outline-none absolute top-1/2 -translate-y-1/2 right-6" style="margin-top: -6px;">
+            <button id="mobile-menu-button" class="md:hidden absolute top-1/2 -translate-y-1/2 right-6">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-8 6h8" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M4 6h16M4 12h16m-8 6h8" />
                 </svg>
             </button>
             
-            <!-- Desktop/Mobile Nav: 모바일에서는 슬라이드 방식이 적용되므로 'hidden' 클래스를 제거 -->
-            <nav id="mobile-menu" class="md:flex md:justify-center md:space-x-4 items-center w-full">
-                <!-- 사이트 공통 네비게이션 -->
-                <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>보증업체</span></a>
-                <a href="index2.html" class="nav-link"><i class="fas fa-info-circle"></i><span>국민비상금 소개</span></a>
-                <a href="index3.html" class="nav-link"><i class="fas fa-list"></i><span>보증업체 이용방법</span></a>
-                <a href="index4.html" class="nav-link active"><i class="fas fa-comments"></i><span>국민비상금 후기</span></a>
-            </nav>
+            <!-- Navigation -->
+            <nav id="mobile-menu"
+                 class="hidden md:flex md:justify-center md:items-center w-full">
+            
+                <button id="mobile-menu-close" class="absolute top-4 right-4 text-3xl md:hidden">
+                    ✕
+                </button>
+            
+                <div class="flex flex-col space-y-6 md:flex-row md:space-y-0 md:space-x-6 md:items-center">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i><span>보증업체</span></a>
+                    <a href="index2.html" class="nav-link"><i class="fas fa-info-circle"></i><span>국민비상금 소개</span></a>
+                    <a href="index3.html" class="nav-link"><i class="fas fa-list"></i><span>보증업체 이용방법</span></a>
+                    <a href="index4.html" class="nav-link active"><i class="fas fa-comments"></i><span>국민비상금 후기</span></a>
+                </div>
+            </nav>     
         </div>
     </header>
 
