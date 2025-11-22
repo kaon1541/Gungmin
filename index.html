@@ -62,50 +62,49 @@
     <!-- Main Content -->
     <main>
         <!-- Hero Section: 대형 배너 이미지와 오버레이 + 1번 배너 2개(안쪽 하단) -->
-        <section class="relative py-20 md:py-32 text-center hero-video-section">
-    
+        <section class="relative py-10 md:py-16 text-center hero-video-section">
+
             <video autoplay loop muted playsinline id="heroVideo" class="background-video">
                 <source src="img/file.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
-            
-            <div class="absolute inset-0 bg-black bg-opacity-60 z-20"></div> 
-            
-            <div class="relative z-30 container mx-auto px-6 text-center">
-                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">급한 자금이 필요할 때,</h1>
-                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-yellow-300">복잡한 서류 없이 5분 안에 해결하세요.</h2>
-                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto scroll-element">
-                    국민비상금 보증업체는 모바일 소액결제, 신용카드 한도, 정보이용료(콘텐츠 이용료)를 활용하여 쉽고 빠르게 현금을 마련할 수 있는 안전한 플랫폼입니다.
-                </p>
-
-                <!-- ✅ 히어로 섹션 안쪽 맨 아래에 1번 배너 2개 + 크기 확대 -->
-                <div class="mt-12 md:mt-16">
-                    <h3 class="text-2xl md:text-3xl font-bold text-white mb-6">국민비상금 보증업체</h3>
-
-                    <div class="max-w-6xl xl:max-w-7xl mx-auto">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-20">
-                            <!-- Banner 1: 국내 1위 현금화 최저 수수료 업체 -->
-                            <div class="bg-white rounded-xl shadow-xl p-1 md:p-2 transform md:scale-110">
-                                <a href="#" title="국내 1위 현금화 최저 수수료 업체">
-                                    <img src="img/8befec5a-5238-484f-bb9b-2631f3e26742.png"
-                                         alt="국내 1위 현금화 최저 수수료 업체 – 소액결제 현금화, 정보이용료 현금화, 신용카드 현금화"
-                                         class="w-full h-auto object-contain">
-                                </a>
-                            </div>
-                            <!-- Banner 2: 비상금이 필요한 모든 순간 -->
-                            <div class="bg-white rounded-xl shadow-xl p-1 md:p-2 transform md:scale-110">
-                                <a href="#" title="비상금이 필요한 모든 순간에는?">
-                                    <img src="img/0982675a-590d-4e5e-aa5e-c9358b110060.png"
-                                         alt="비상금이 필요한 모든 순간에는 – 소액결제 현금화, 정보이용료 현금화, 신용카드 현금화, 상품권 현금화"
-                                         class="w-full h-auto object-contain">
-                                </a>
-                            </div>
+        
+            <div class="absolute inset-0 bg-black bg-opacity-60 z-20"></div>
+        
+            <!-- 🔥 배너를 맨 위로 이동 -->
+            <div class="relative z-30 container mx-auto px-6 text-center mt-4 md:mt-8 mb-10 md:mb-16">
+                <div class="max-w-6xl xl:max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-16">
+        
+                        <div class="bg-white rounded-xl shadow-xl p-1 md:p-2 transform md:scale-105">
+                            <a href="#" title="국내 1위 현금화 최저 수수료 업체">
+                                <img src="img/8befec5a-5238-484f-bb9b-2631f3e26742.png"
+                                     alt="국내 1위 현금화 최저 수수료 업체"
+                                     class="w-full h-auto object-contain">
+                            </a>
+                        </div>
+        
+                        <div class="bg-white rounded-xl shadow-xl p-1 md:p-2 transform md:scale-105">
+                            <a href="#" title="비상금이 필요한 모든 순간에는?">
+                                <img src="img/0982675a-590d-4e5e-aa5e-c9358b110060.png"
+                                     alt="비상금이 필요한 모든 순간에는"
+                                     class="w-full h-auto object-contain">
+                            </a>
                         </div>
                     </div>
                 </div>
-                <!-- ✅ 배너 끝 -->
             </div>
-        </section>
+        
+            <!-- 🔥 텍스트 영역 시작 -->
+            <div class="relative z-30 text-center container mx-auto px-6">
+                <h1 class="text-3xl md:text-5xl font-bold text-white mb-4">급한 자금이 필요할 때,</h1>
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 text-yellow-300">복잡한 서류 없이 5분 안에 해결하세요.</h2>
+                <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto scroll-element mb-10">
+                    국민비상금 보증업체는 모바일 소액결제, 신용카드 한도, 정보이용료(콘텐츠 이용료)를
+                    활용하여 쉽고 빠르게 현금을 마련할 수 있는 안전한 플랫폼입니다.
+                </p>
+            </div>
+        </section>        
 
         <!-- 2. 국민비상금만의 차별점 (Features) -->
         <!-- 백그라운드 대신 흰색으로 설정하고, 주요 아이콘과 텍스트만 색상으로 강조합니다 -->
